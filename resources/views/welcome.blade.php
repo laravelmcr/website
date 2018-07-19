@@ -5,14 +5,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Laravel Mcr - Laravel Meetup in Manchester, UK</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
         <style>
-            html, body {
+            html, body, a {
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
@@ -46,7 +47,12 @@
             }
 
             .title {
+                color:#f75e54;
                 font-size: 84px;
+            }
+
+            .links {
+                margin-bottom: 40px;
             }
 
             .links > a {
@@ -58,9 +64,25 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
+            .links > a:hover {
+                color:#f75e54;
+            }
 
             .m-b-md {
                 margin-bottom: 30px;
+            }
+
+            .fab {
+                vertical-align: middle;
+                font-size:2em;
+            }
+
+            .meetup {
+                font-size:1.5em;
+                line-height: 1.5em;
+            }
+            .meetup span {
+                font-weight: 300;
             }
         </style>
     </head>
@@ -79,17 +101,23 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Laravel <span>Mcr</span>
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/laravelmcr" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://meetup.com/laravel-mcr" target="_blank"><i class="fab fa-meetup"></i></a>
+                    <a href="https://twitter.com/mcrlaravel" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
+
+                <div class="meetup">
+                    <p>First Meetup: <span>7pm - 9pm, 26th July 2018 @ UKFast Campus</span> - <a href="https://www.meetup.com/Laravel-Mcr/events/pkcrwpyxkbjc/">find out more</a></p>
+                </div>
+
+
             </div>
         </div>
+
+
     </body>
 </html>
