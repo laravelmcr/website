@@ -118,7 +118,7 @@
                 </div>
 
                 <div class="meetup">
-                    <p><span>Next Meetup:</span> <a href="{{ $nextMeetup['link'] }}">{{ $nextMeetup['time']->format('ga') }}, {{ $nextMeetup['date']->format('jS F Y') }} @ {{ $nextMeetup['location'] }}</a></p>
+                    <p><span>Next Meetup:</span> <a href="{{ $nextMeetup['link'] }}" target="_blank">{{ $nextMeetup['time']->format('ga') }}, {{ $nextMeetup['date']->format('jS F Y') }} @ {{ $nextMeetup['location'] }}</a></p>
                 </div>
 
 

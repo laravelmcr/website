@@ -26,6 +26,10 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+      $schedule->command('cache:forget next-meetup')->when(function() {
+        return new \Carbon\Carbon('last thursday of this month')->isToday();
+      })>at('20:00');
     }
 
     /**
