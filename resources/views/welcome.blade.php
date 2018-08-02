@@ -22,6 +22,13 @@
                 margin: 0;
             }
 
+            a {
+              text-decoration: none;
+            }
+            a:hover {
+              border-bottom: 1px solid;
+            }
+
             .full-height {
                 height: 100vh;
             }
@@ -82,7 +89,7 @@
                 line-height: 1.5em;
             }
             .meetup span {
-                font-weight: 300;
+                font-weight: 400;
             }
         </style>
     </head>
@@ -111,7 +118,7 @@
                 </div>
 
                 <div class="meetup">
-                    <p>First Meetup: <span>7pm - 9pm, 26th July 2018 @ UKFast Campus</span> - <a href="https://www.meetup.com/Laravel-Mcr/events/pkcrwpyxkbjc/">find out more</a></p>
+                    <p><span>Next Meetup:</span> <a href="{{ $nextMeetup['link'] }}">{{ $nextMeetup['time']->format('ga') }}, {{ $nextMeetup['date']->format('jS F Y') }} @ {{ $nextMeetup['location'] }}</a></p>
                 </div>
 
 
