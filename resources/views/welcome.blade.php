@@ -25,7 +25,7 @@
             a {
               text-decoration: none;
             }
-            a:hover {
+            .meetup a:hover {
               border-bottom: 1px solid;
             }
 
