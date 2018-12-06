@@ -118,7 +118,9 @@
                 </div>
 
                 <div class="meetup">
+                    @if($nextMeetup)
                     <p><span>Next Meetup:</span> <a href="{{ $nextMeetup['link'] }}" target="_blank">{{ $nextMeetup['time']->format('ga') }}, {{ $nextMeetup['date']->format('jS F Y') }} @ {{ $nextMeetup['location'] }}</a></p>
+                    @endif
                 </div>
 
 

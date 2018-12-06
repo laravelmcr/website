@@ -21,17 +21,19 @@ class HomeController extends Controller
               'page' => 1]
           ]);
 
-        $meetup = json_decode($response->getBody(), true)[0];
+        $meetup = json_decode($response->getBody(), true);
+        if($meetup) {
+            $meetup = $meetup[0];
+            // Store what we need in cache
+            $toCache = [];
 
-        // Store what we need in cache
-        $toCache = [];
+            $toCache['date'] = Carbon::createFromFormat('Y-m-d', $meetup['local_date']);
+            $toCache['time'] = Carbon::createFromFormat('H:m', $meetup['local_time']);
+            $toCache['location'] = $meetup['venue']['name'];
+            $toCache['link'] = $meetup['link'];
 
-        $toCache['date'] = Carbon::createFromFormat('Y-m-d', $meetup['local_date']);
-        $toCache['time'] = Carbon::createFromFormat('H:m', $meetup['local_time']);
-        $toCache['location'] = $meetup['venue']['name'];
-        $toCache['link'] = $meetup['link'];
-
-        Cache::forever('next-meetup', $toCache);
+            Cache::forever('next-meetup', $toCache);
+        }
 
       }
 
